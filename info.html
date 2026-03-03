@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Más Información - Kings Legend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tu CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="faq-page">
+
+    <div class="faq-wrapper">
+        <div class="faq-logo">
+            <img src="logo.png" alt="Kings Legend">
+        </div>
+        <div class="faq-title">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Todo lo que necesitas saber sobre Kings Legend</p>
+        </div>
+
+        <!-- ITEM 1 -->
+        <div class="faq-item">
+            <button class="faq-question">¿Quiénes somos?</button>
+            <div class="faq-answer">
+                <p>
+                    Kings Legend es una plataforma competitiva dedicada a organizar torneos de League of Legends
+                    para jugadores que quieren competir, mejorar y ganar premios reales.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="faq-item">
+            <button class="faq-question">¿Cómo funcionan los torneos?</button>
+            <div class="faq-answer">
+                <p>
+                    Organizamos torneos semanales con sistema de ranking, divisiones competitivas
+                    y recompensas según rendimiento.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="faq-item">
+            <button class="faq-question">¿Cuándo se juega?</button>
+            <div class="faq-answer">
+                <p>
+                    Los torneos se juegan principalmente en horario de tarde y fines de semana
+                    para facilitar la participación.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="faq-item">
+            <button class="faq-question">¿Qué premios puedo ganar?</button>
+            <div class="faq-answer">
+                <p>
+                    Ofrecemos premios en efectivo, recompensas digitales, reconocimiento
+                    en ranking y oportunidades competitivas.
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="faq-item">
+            <button class="faq-question">¿Necesito equipo para participar?</button>
+            <div class="faq-answer">
+                <p>
+                    Puedes inscribirte con tu equipo o buscar jugadores dentro de la plataforma
+                    para formar uno y competir.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT DESPLEGABLE -->
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+            question.addEventListener("click", () => {
+                const item = question.parentElement;
+                item.classList.toggle("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

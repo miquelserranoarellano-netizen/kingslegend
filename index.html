@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings of Legends</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="barra-redes">
+
+        <a href="https://twitch.tv/kingslegendesport" target="_blank" rel="noopener">
+            <i class="fa-brands fa-twitch"></i>
+        </a>
+
+        <a href="https://instagram.com/kingslegendesport" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://twitter.com/KingsLegendEsp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://tiktok.com/@kingslegendesport" target="_blank" rel="noopener">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="https://discord.gg/TU_INVITACION" target="_blank" rel="noopener">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+
+        <a href="https://youtube.com/@kingsLegendEsport" target="_blank" rel="noopener">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kingslegendesport@gmail.com&su=Consulta%20Kings%20Legend&body=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre..."
+            target="_blank" rel="noopener">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        </a>
+
+    </div>
+
+    <!-- BARRA INFERIOR (MENÚ + TRADUCTOR + LOGIN + REGISTER) -->
+    <div class="barra-menu-estadisticas">
+
+        <!-- LOGO IZQUIERDA -->
+        <div class="menu-left">
+            <div class="logo-wrapper">
+                <img src="logo.png" class="logo" alt="logo">
+            </div>
+        </div>
+
+        <!-- MENÚ CENTRADO -->
+        <div class="menu-center">
+            <a href="#">PARTIDAS</a>
+            <a href="#">CLASIFICACIÓN</a>
+            <a href="#">EQUIPOS</a>
+            <a href="#">JUGADORES</a>
+            <a href="#">ESTADÍSTICAS</a>
+            <a href="#">NOTICIAS</a>
+            <a href="#">GAMING</a>
+        </div>
+
+        <!-- BLOQUE DERECHO -->
+        <div class="menu-right">
+
+            <div class="language-selector">
+                <button class="lang-btn">ES ▾</button>
+                <div class="lang-dropdown">
+                    <div onclick="translateLanguage('es')">ES</div>
+                    <div onclick="translateLanguage('en')">EN</div>
+                    <div onclick="translateLanguage('fr')">FR</div>
+                    <div onclick="translateLanguage('de')">DE</div>
+                    <div onclick="translateLanguage('it')">IT</div>
+                    <div onclick="translateLanguage('pt')">PT</div>
+                    <div onclick="translateLanguage('ar')">AR</div>
+                </div>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="btn">Login</a>
+                <a href="register.html" class="btn register">Register</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-text">
+
+                <p class="hero-small">BIENVENIDOS A</p>
+
+                <h1>KINGS LEGEND</h1>
+
+                <p class="hero-sub">
+                    <span class="hero-cta">FORMA TU EQUIPO Y LUCHA POR LA GLORIA</span>
+                    <span class="sub-grey">LEAGUE OF LEGENDS</span>
+                </p>
+
+                <div class="feature-bar">
+                    <div class="particles">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="feature">
+                        <img src="trofeo.png" alt="Torneos">
+                        <h3>Torneos Semanales</h3>
+                    </div>
+
+                    <div class="feature">
+                        <img src="recompensas.png" alt="Premios">
+                        <h3>Gana Premios</h3>
+                    </div>
+
+                    <div class="feature">
+                        <img src="divisiondeligas.png" alt="Ranking">
+                        <h3>Sistema de Ranking</h3>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <button type="button" class="accept-btn" onclick="handleRegisterClick()">
+                        INSCRÍBETE
+                    </button>
+                    <a href="info.html" class="btn-secondary">MÁS INFORMACIÓN</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GOOGLE TRANSLATE -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,de,it,pt,ar',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translateLanguage(lang) {
+            const interval = setInterval(() => {
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                    clearInterval(interval);
+                }
+            }, 200);
+        }
+    </script>
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+    <script src="authCheck.js"></script>
+    <script src="login.js"></script>
+    <script>
+        function handleRegisterClick() {
+            const isLogged = localStorage.getItem("userLogged");
+
+            if (!isLogged) {
+                window.location.href = "login.html";
+            } else {
+                window.location.href = "torneos.html";
+            }
+        }
+    </script>
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const isLogged = localStorage.getItem("userLogged");
+    const userEmail = localStorage.getItem("userEmail");
+
+    const authButtons = document.querySelector(".auth-buttons");
+    const userInfo = document.querySelector(".user-info");
+    const userNameSpan = document.querySelector(".user-name");
+    const registerButton = document.querySelector(".accept-btn");
+    const logoutBtn = document.querySelector(".logout-btn");
+
+    // Si está logueado
+    if (isLogged) {
+
+        // Ocultar Login / Register
+        if (authButtons) authButtons.style.display = "none";
+
+        // Mostrar usuario
+        if (userInfo) {
+            userInfo.style.display = "block";
+            if (userNameSpan) userNameSpan.textContent = userEmail;
+        }
+
+        // Cambiar texto del botón principal
+        if (registerButton) {
+            registerButton.textContent = "TORNEOS";
+        }
+    }
+
+    // Logout
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("userLogged");
+            localStorage.removeItem("userEmail");
+            window.location.reload();
+        });
+    }
+
+});
+
+// Función botón principal
+function handleRegisterClick() {
+
+    const isLogged = localStorage.getItem("userLogged");
+
+    if (!isLogged) {
+        window.location.href = "login.html";
+    } else {
+        window.location.href = "torneos.html";
+    }
+}
+</script>
+</body>
+
+</html>
